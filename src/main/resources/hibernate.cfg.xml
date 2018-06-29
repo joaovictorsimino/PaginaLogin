@@ -10,7 +10,7 @@
 
 		<!-- Configurações de Conexão com o Banco de Dados -->
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="connection.url">jdbc:mysql://127.0.0.1:3306/drogaria</property>
+		<property name="connection.url">jdbc:mysql://127.0.0.1:3306/acesso</property>
 		<property name="connection.username">root</property>
 		<property name="connection.password">mariaines</property>
 
@@ -33,16 +33,9 @@
 		<property name="hbm2ddl.auto">validate</property>
 		
 		<!-- Mapeamento das entidades -->
-		<mapping class="br.drogaria.domain.Estado"/>
-		<mapping class="br.drogaria.domain.Fabricante"/>
-		<mapping class="br.drogaria.domain.Cidade"/>
-		<mapping class="br.drogaria.domain.Produto"/>
-		<mapping class="br.drogaria.domain.Pessoa"/>
-		<mapping class="br.drogaria.domain.Cliente"/>
-		<mapping class="br.drogaria.domain.Funcionario"/>
-		<mapping class="br.drogaria.domain.Usuario"/>
-		<mapping class="br.drogaria.domain.Venda"/>
-		<mapping class="br.drogaria.domain.ItemVenda"/>
+		<mapping class="br.paginaLogin.domain.Client"/>
+		<mapping class="br.paginaLogin.domain.FProduct"/>
+		
 	</session-factory>
 		
 </hibernate-configuration>
