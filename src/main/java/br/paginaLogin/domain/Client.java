@@ -3,7 +3,8 @@ package br.paginaLogin.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
+
 
 @SuppressWarnings("serial")
 @Entity
@@ -11,7 +12,7 @@ public class Client extends GenericDomain {
 	//@SuppressWarnings("unused")
 	@Column(length = 50, nullable = false)
 	private String nome;
-	@OneToMany
+	@ManyToOne
 	@JoinColumn(nullable = false)
 	private Product produto;
 	@Column(length = 20, nullable = false)

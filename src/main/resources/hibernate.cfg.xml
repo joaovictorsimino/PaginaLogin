@@ -34,7 +34,7 @@
 		
 		<!-- Mapeamento das entidades -->
 		<mapping class="br.paginaLogin.domain.Client"/>
-		<mapping class="br.paginaLogin.domain.FProduct"/>
+		<mapping class="br.paginaLogin.domain.Product"/>
 		
 	</session-factory>
 		
