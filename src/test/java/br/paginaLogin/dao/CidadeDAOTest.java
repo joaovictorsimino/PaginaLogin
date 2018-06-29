@@ -21,6 +21,7 @@ public class CidadeDAOTest {
 		
 		CidadeDao cidadeDao = new CidadeDao();
 		cidadeDao.salvar(cidade);
+		System.out.println(cidade);
 		
 	}
 }
