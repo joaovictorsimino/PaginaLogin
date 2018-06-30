@@ -1,52 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+<html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
-	xmlns:p="http://primefaces.org/ui"
-	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-	template="/templates/modelo.xhtml">
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Acesso aos clientes</title>
+</h:head>
+<h:body>
+	<p:dataTable id="tabela" emptyMessage="Nenhum registro encontrado"
+		paginator="true" rows="5">
+		<f:facet name="footer">
+			<p:commandButton value="Novo">
+				<f:actionListener
+					type="org.omnifaces.eventlistener.ResetInputAjaxActionListener" />
+			</p:commandButton>
+		</f:facet>
 
-	<ui:define name="conteudo">
-		<p:growl id="mensagem" />
-		<h:form id="formCadastro">
-			<p:panel id="panelcad" header="Cadastro">
-				<h:panelGrid columns="4">
-					<p:outputLabel value="Nome do Cliente:" for="nome" />
-					<p:inputText id="nome" />
+		<p:column headerText="Cliente">
+			<h:outputText />
+		</p:column>
 
-					<p:outputLabel value="host:" for="host" />
-					<p:inputText id="host" />
-					
-
-					<p:outputLabel for="menu" value="Produto:" />
-
-					<p:selectOneMenu id="menu" filter="true">
-						<f:selectItem noSelectionOption="true"
-							itemLabel="Selecione um tipo" />
-						<f:selectItems value="#{tipoBean.tipos}" var="tipo" />
-					</p:selectOneMenu>
-
-					<p:outputLabel value="password:" for="password" />
-					<p:inputText id="password" />
-					
-					<p:outputLabel value="port:" for="port" />
-					<p:inputText id="port" />
-					
-
-
-				</h:panelGrid>
-				
-
-
-
-			</p:panel>
-		</h:form>
-
-
+		<p:column headerText="Host">
+			<h:outputText />
+		</p:column>
 
 		
-	</ui:define>
-
-</ui:composition>
+	</p:dataTable>
+</h:body>
+</html>
